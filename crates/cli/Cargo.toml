@@ -1,0 +1,14 @@
+[package]
+name = "opsec-cli"
+description = "CLI de opsec-shield"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "opsec"
+path = "src/main.rs"
+
+[dependencies]
+core-device.workspace = true

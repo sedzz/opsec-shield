@@ -1,0 +1,9 @@
+[package]
+name = "core-device"
+description = "Visibilidad del dispositivo: puertos, conexiones, privilegios y persistencia"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
