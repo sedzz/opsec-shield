@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "en-US"
+
+reviews:
+  profile: "chill"
+  high_level_summary: true
+  poem: false
+  review_status: true
+  path_filters:
+    - "!Cargo.lock"
+    - "!target/**"
+  path_instructions:
+    - path: "crates/**/*.rs"
+      instructions: |
+        This is a security-focused Rust project that inspects the local device
+        (ports, connections, privileges, persistence). Review for:
+        - Memory and concurrency safety; justify every `unsafe` block.
+        - No `unwrap()`/`expect()` on fallible system calls in library code.
+        - Windows API misuse (handle leaks, unchecked return values).
+        - Sensitive data leaking into logs or output.
+        - Clear public API docs (`///`) and tests for new logic.
+    - path: "crates/core-device/**"
+      instructions: |
+        Library crate: must stay free of UI/CLI concerns and network access
+        so it can be reused by other front-ends later.
+
+chat:
+  auto_reply: true

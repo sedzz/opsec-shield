@@ -1,6 +1,6 @@
 [package]
 name = "opsec-cli"
-description = "CLI de opsec-shield"
+description = "Command-line interface for opsec-shield"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
