@@ -1,25 +1,27 @@
 # opsec-shield
 
-Herramienta open source de OPSEC para tu propio dispositivo. No es un antivirus:
-responde a "¿qué pasa en mi máquina, quién tiene acceso y qué ha cambiado?".
+Open source OPSEC tool for your own device. It is not an antivirus: it answers
+"what is happening on my machine, who has access, and what has changed?".
 
-## Estructura
+## Layout
 
-- `crates/core-device`: lógica (puertos, conexiones, privilegios, persistencia).
-- `crates/cli`: binario `opsec`, capa fina sobre el núcleo.
+- `crates/core-device`: core logic (ports, connections, privileges, persistence).
+- `crates/cli`: the `opsec` binary, a thin layer on top of the core.
 
-## Hoja de ruta
+## Roadmap
 
-1. Esqueleto del workspace (hecho)
+1. Workspace skeleton (done)
 2. `opsec ports`
 3. `opsec connections`
-4. `opsec privileges` y `opsec startup`
-5. `opsec snapshot` y `opsec diff`
+4. `opsec privileges` and `opsec startup`
+5. `opsec snapshot` and `opsec diff`
 
-## Uso
+## Usage
 
 ```powershell
 cargo run -p opsec-cli
 ```
 
-Licencia: AGPL-3.0-or-later.
+## License
+
+AGPL-3.0-or-later. See [LICENSE](LICENSE).

@@ -1,6 +1,6 @@
 [package]
 name = "core-device"
-description = "Visibilidad del dispositivo: puertos, conexiones, privilegios y persistencia"
+description = "Device visibility: ports, connections, privileges and persistence"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

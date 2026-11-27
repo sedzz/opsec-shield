@@ -1,9 +1,9 @@
-//! Núcleo de visibilidad del dispositivo.
+//! Device visibility core.
 //!
-//! Librería pura, sin dependencias de interfaz ni de red, para poder
-//! reutilizarla desde el CLI ahora y desde un servidor más adelante.
+//! A pure library with no UI or network dependencies, so it can be reused by
+//! the CLI today and by other front-ends or a server later.
 
-/// Versión del núcleo, útil para comprobar que el CLI enlaza bien.
+/// Returns the core version, useful to check that the CLI links correctly.
 pub fn version() -> &'static str {
     env!("CARGO_PKG_VERSION")
 }
@@ -13,7 +13,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn version_no_esta_vacia() {
+    fn version_is_not_empty() {
         assert!(!version().is_empty());
     }
 }
